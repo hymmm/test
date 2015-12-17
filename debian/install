@@ -1,0 +1,2 @@
+pcf/*.pcf*	usr/share/fonts/X11/misc/
+debian/xfonts-kappa20.alias	etc/X11/fonts/misc/

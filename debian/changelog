@@ -1,0 +1,102 @@
+xfonts-kappa20 (1:0.396-1) unstable; urgency=medium
+
+  * repack upstream tarball
+  * debian/control
+    - set maintainer as Debian Fonts Task Force with previous maintainer's ack.
+    - set Uploader as me.
+    - set Standards-Version: 3.9.6
+    - add Multi-Arch: foreign
+    - use Breaks: instead of Conflicts:
+  * debian/compat
+    - set 9, fix "package-uses-deprecated-debhelper-compat-version"
+  * debian/source/format
+    - specify "3.0 (quilt)"
+  * debian/install
+    - move target list from debian/rules
+  * debian/rules
+    - simplfy, use dh, fix "should be rebuilt with current dh_installxfonts"
+      (Closes: #682052)
+      It also fix "debian-rules-missing-recommended-target" and
+      "dh-clean-k-is-deprecated" lintian warning
+    - use --parallel option
+    - use -n option for gzip to avoid "package-contains-timestamped-gzip"
+  * debian/copyright
+    - convert to copyright format 1.0
+      fix "debian-copyright-file-uses-obsolete-national-encoding"
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 17 Dec 2015 13:22:21 +0900
+
+xfonts-kappa20 (0.396-3) unstable; urgency=low
+
+  * Update Standards-Version.
+  * debian/control: debhelper is added into Build-Depends instead of
+    Build-Depends-Indep.
+
+ -- GOTO Masanori <gotom@debian.org>  Sun,  7 May 2006 10:29:14 +0900
+
+xfonts-kappa20 (0.396-2.1) unstable; urgency=low
+
+  * NMU (acknowledged by gotom on IRC)
+  * adapt new X fonts directory structure, closes: #362386
+     - fonts are moved to /usr/share/fonts/X11/misc
+     - xfonts-ayu.alias is installed into /etc/X11/fonts/X11R7/misc
+     - update version of Build-Depends-Indep: debhelper to handle
+       these directory structure
+
+ -- ISHIKAWA Mutsumi <ishikawa@debian.org>  Wed, 26 Apr 2006 01:55:23 +0900
+
+xfonts-kappa20 (0.396-2) unstable; urgency=low
+
+  * debian/control: Change maintainer address.
+  * debian/control: Update Description.
+  * debian/README.Debian: Removed.
+  * debian/copyright: Fix translatation typo.
+
+ -- GOTO Masanori <gotom@debian.org>  Sun, 13 Mar 2005 11:11:11 +0900
+
+xfonts-kappa20 (0.396-1) unstable; urgency=low
+
+  * new upstream release.
+  * debian/conffiles: removed.
+  * debian/docs: removed.
+  * now put upstream tar ball, not extract debian dir on
+    its source dir.
+
+ -- GOTO Masanori <gotom@debian.or.jp>  Tue, 30 Dec 2003 16:59:22 +0900
+
+xfonts-kappa20 (0.395-1) unstable; urgency=low
+
+  * new upstream release.
+  * Some ISO-8859-1 fonts are fixed and added.  (Closes: #203186)
+
+ -- GOTO Masanori <gotom@debian.or.jp>  Tue, 29 Jul 2003 10:17:35 +0900
+
+xfonts-kappa20 (0.394-4) unstable; urgency=low
+
+  * debian/control: change build-depends to build-depends-indep. 
+  * debian/control: add depends xutils (>> 4.0.3)
+  * debian/control: add conflicts xbase-clients (<< 4.0).
+  * debian/rules: comment out dh_testversion.
+  * debian/conffiles: added.
+
+ -- GOTO Masanori <gotom@debian.or.jp>  Sun, 18 Nov 2001 23:19:54 +0900
+
+xfonts-kappa20 (0.394-3) unstable; urgency=low
+
+  * debian/control: fixed architecture from any to all. (closes: Bug#93833)
+
+ -- GOTO Masanori <gotom@debian.or.jp>  Sat, 14 Apr 2001 13:18:04 +0900
+
+xfonts-kappa20 (0.394-2) unstable; urgency=low
+
+  * debian/control: fixed typo. (closes: Bug#93719)
+
+ -- GOTO Masanori <gotom@debian.or.jp>  Thu, 12 Apr 2001 19:24:58 +0900
+
+xfonts-kappa20 (0.394-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- GOTO Masanori <gotom@debian.or.jp>  Mon, 19 Mar 2001 03:10:40 +0900
+
+

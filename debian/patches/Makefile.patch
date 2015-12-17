@@ -1,0 +1,23 @@
+Index: xfonts-kappa20-0.396/Makefile
+===================================================================
+--- xfonts-kappa20-0.396.orig/Makefile
++++ xfonts-kappa20-0.396/Makefile
+@@ -1,8 +1,8 @@
+ # Makefile for Kappa 20dot Fonts Version 0.396 (2003/10/06).
+ 
+-TARGETDIR = /usr/X11R6/lib/X11/fonts/local
++TARGETDIR = $(DESTDIR)/usr/share/fonts/X11/misc/
+ 
+-COMPRESSCMD = gzip -9
++COMPRESSCMD = gzip -c9 -n
+ COMPRESSEXT = .gz
+ #COMPRESSCMD = compress
+ #COMPRESSEXT = .Z
+@@ -189,7 +189,6 @@ fonts.alias:
+ install::
+ 	test -d ${TARGETDIR} || mkdir ${TARGETDIR}
+ 	install -m 644 -c pcf/*.pcf* pcf/fonts.alias ${TARGETDIR}
+-	cd ${TARGETDIR} ; mkfontdir
+ 
+ clean::
+ 	rm -f *~ iso8859/*~ pcf/*.pcf* pcf/fonts.dir pcf/fonts.alias vk20m.bdf vk20b.bdf nk20?-?.bdf 10x20?.bdf 10x20L*.bdf vk20m.bdf.orig

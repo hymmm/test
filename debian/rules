@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+#export DH_VERBOSE=1
+
+VERSION=0.396
+TARBALL=Kappa20-$(VERSION).tar.bz2
+KAPPADIR=Kappa20-$(VERSION)
+
+%:
+	dh $@ --parallel
